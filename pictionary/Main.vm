@@ -1,0 +1,12 @@
+function Main.main 0
+call StartScreen.go 0
+pop temp 0
+push constant 5000
+call Sys.wait 1
+pop temp 0
+call Screen.clearScreen 0
+pop temp 0
+call Genre.gen 0
+pop temp 0
+push constant 0
+return

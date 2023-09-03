@@ -1,0 +1,11 @@
+class Main {
+
+   function void main() {
+
+           
+do StartScreen.go();
+do Sys.wait(5000);
+do Screen.clearScreen();
+do Genre.gen();
+   return;
+}}

@@ -1,0 +1,113 @@
+class Level5
+{
+   function void l5()
+   {var int i,j,key;
+    var char x,y,z;
+    var String solution;
+    var String correct;
+var int location1,location2,location3,location4,memAddress1,memAddress2,memAddress3,memAddress4 ;
+let location3=300;
+let memAddress3 = 16384+location3;
+	do Memory.poke(memAddress3+0, 0);
+	do Memory.poke(memAddress3+32, 0);
+	do Memory.poke(memAddress3+64, 14392);
+	do Memory.poke(memAddress3+96, 31868);
+	do Memory.poke(memAddress3+128, -258);
+	do Memory.poke(memAddress3+160, -769);
+	do Memory.poke(memAddress3+192, -1921);
+	do Memory.poke(memAddress3+224, -961);
+	do Memory.poke(memAddress3+256, -385);
+	do Memory.poke(memAddress3+288, 31998);
+	do Memory.poke(memAddress3+320, 14460);
+	do Memory.poke(memAddress3+352, 7224);
+	do Memory.poke(memAddress3+384, 3696);
+	do Memory.poke(memAddress3+416, 1728);
+	do Memory.poke(memAddress3+448, 640);
+	do Memory.poke(memAddress3+480, 0);
+let location1=100;
+let memAddress1 = 16384+location1;
+	do Memory.poke(memAddress1+0, 0);
+	do Memory.poke(memAddress1+32, 4680);
+	do Memory.poke(memAddress1+64, 2340);
+	do Memory.poke(memAddress1+96, 4680);
+	do Memory.poke(memAddress1+128, 0);
+	do Memory.poke(memAddress1+160, 32764);
+	do Memory.poke(memAddress1+192, 16391);
+	do Memory.poke(memAddress1+224, 16389);
+	do Memory.poke(memAddress1+256, 16391);
+	do Memory.poke(memAddress1+288, 16388);
+	do Memory.poke(memAddress1+320, 8200);
+	do Memory.poke(memAddress1+352, 4112);
+	do Memory.poke(memAddress1+384, 2080);
+	do Memory.poke(memAddress1+416, 1984);
+	do Memory.poke(memAddress1+448, 0);
+	do Memory.poke(memAddress1+480, 0);
+let location2=200;
+let memAddress2 = 16384+location2;
+	do Memory.poke(memAddress2+0, 480);
+	do Memory.poke(memAddress2+32, 480);
+	do Memory.poke(memAddress2+64, 480);
+	do Memory.poke(memAddress2+96, 480);
+	do Memory.poke(memAddress2+128, 480);
+	do Memory.poke(memAddress2+160, 16383);
+	do Memory.poke(memAddress2+192, 16383);
+	do Memory.poke(memAddress2+224, 16383);
+	do Memory.poke(memAddress2+256, 480);
+	do Memory.poke(memAddress2+288, 480);
+	do Memory.poke(memAddress2+320, 480);
+	do Memory.poke(memAddress2+352, 480);
+	do Memory.poke(memAddress2+384, 480);
+	do Memory.poke(memAddress2+416, 0);
+	do Memory.poke(memAddress2+448, 0);
+	do Memory.poke(memAddress2+480, 0);
+let location4=400;
+let memAddress4 = 16384+location4;
+	do Memory.poke(memAddress4+0, 0);
+	do Memory.poke(memAddress4+32, -1);
+	do Memory.poke(memAddress4+64, -1);
+	do Memory.poke(memAddress4+96, -1);
+	do Memory.poke(memAddress4+128, -1);
+	do Memory.poke(memAddress4+160, 0);
+	do Memory.poke(memAddress4+192, 0);
+	do Memory.poke(memAddress4+224, 0);
+	do Memory.poke(memAddress4+256, 0);
+	do Memory.poke(memAddress4+288, 0);
+	do Memory.poke(memAddress4+320, -1);
+	do Memory.poke(memAddress4+352, -1);
+	do Memory.poke(memAddress4+384, -1);
+	do Memory.poke(memAddress4+416, -1);
+	do Memory.poke(memAddress4+448, 0);
+	do Memory.poke(memAddress4+480, 0);
+
+
+
+do Output.moveCursor(5,0);
+ do Output.printString("GUESS THE WORD: ");
+      
+      let i = 0;
+
+     let solution = "COFFEE BREAK";
+      let correct = String.new(12);
+      
+      while(i < 12)
+      { let x=Keyboard.readChar();
+         let correct = correct.appendChar(x);
+         let i = i+1;
+      }
+ do Output.println();  
+do Output.printString(correct);
+ do Output.println();  
+let j=0;
+while(j<12){
+
+if(~(solution.charAt(j)=correct.charAt(j))){
+ do Output.printString("OOPS, TRY AGAIN!");
+return;}
+let j=j+1;
+}
+ do Output.printString("GOOD JOB");
+do Sys.wait(5000);
+do Genre.gen();
+return;
+}
+}

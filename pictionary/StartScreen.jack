@@ -1,0 +1,21 @@
+class StartScreen {
+	
+	function void go() {
+
+		var String str;
+		
+		let str = "P I C T I O N A R Y:";
+		do Output.moveCursor(6, 10);
+		do Output.printString(str);
+		do str.dispose();
+		
+		
+		let str = "Are you Ready?";
+		do Output.moveCursor(7, 10);
+		do Output.printString(str);
+		do str.dispose();
+		
+return;	
+}}
+
+

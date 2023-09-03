@@ -1,0 +1,54 @@
+class Genre {
+	
+	function void gen() {
+var int x;
+var String str;
+do Screen.clearScreen();
+let str = "1- QUESTION 1";
+		do Output.moveCursor(6, 10);
+		do Output.printString(str);
+		do str.dispose();
+		
+		
+		let str = "2- QUESTION 2";
+		do Output.moveCursor(7, 10);
+		do Output.printString(str);
+		do str.dispose();
+		
+
+
+		let str = "3- QUESTION 3";
+		do Output.moveCursor(8, 10);
+		do Output.printString(str);
+		do str.dispose();
+		
+		
+		let str = "4- QUESTION 4";
+		do Output.moveCursor(9, 10);
+		do Output.printString(str);
+		do str.dispose();
+
+		let str = "5- QUESTION 5";
+		do Output.moveCursor(10, 10);
+		do Output.printString(str);
+		do str.dispose();
+
+		let str = "6- TO QUIT THE GAME !";
+		do Output.moveCursor(10, 10);
+		do Output.printString(str);
+		do str.dispose();
+
+
+do Output.moveCursor(11, 0);
+let x=Keyboard.readInt("enter a number: ");
+if(x=1){do Screen.clearScreen(); do Level1.l1();}
+if(x=2){do Screen.clearScreen(); do Level2.l2();}
+if(x=3){do Screen.clearScreen(); do Level3.l3();}
+if(x=4){do Screen.clearScreen(); do Level4.l4();}
+if(x=5){do Screen.clearScreen(); do Level5.l5();}
+if(x=6){do Screen.clearScreen(); }
+
+
+return;
+}	
+}
